@@ -1,0 +1,7 @@
+//生成ssh key 查看目录/home/user/.ssh/ 是否有id_rsa 、id_rsa.pub文件。没有则需生成。
+$ ssh-keygen -t rsa -C "jn1529600@163.com"
+秘钥类型可以用 -t 选项制定。如果没有指定则默认生成用于ssh-2的rsa秘钥。这里使用rsa
+同时秘钥中有一个注释字段，用-C来指定所指定的注释，可以方便用户标识这个秘钥，指出秘钥的用途或者其他有用的信息。所以在这里输入自己的邮箱或者其他都行。
+输入完毕后程序同时要求输入一个密语字符串（passphase）, 空标识没有密语。接着会让输入两次口令（password），空表示没有口令。3次回车即可完成当前步骤。此时/home/user/.ssh 目录下已经生成好了。
+
+登录目标服务器，在setting -> ssh keys .中添加id_rsa.pub   title 区分添加的ssh keys。
