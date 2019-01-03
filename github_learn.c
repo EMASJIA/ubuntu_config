@@ -4,6 +4,11 @@
 //1:mkdir my_github
 //1.1:git init  //此方法用于创建本地仓库
 
+
+//########config############
+//git config --global user.email "jn1529600@163.com"
+//git config --global user.name "git hub name"
+
 //########检出仓库########
 
 //1.1:执行如下命令以创建一个本地仓库的克隆版本：
